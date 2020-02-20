@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 62
+  controlID: 92
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -454,9 +454,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.3897021, y: 1.2610768, z: -43.585384}
+    m_Target: {x: 3.7316842, y: -1.5177381, z: -676}
     speed: 2
-    m_Value: {x: 0.023055673, y: 1.5090212, z: -43.49976}
+    m_Value: {x: 3.7316842, y: -1.5177381, z: -676}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -506,9 +506,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 22.699121
+    m_Target: 24.328184
     speed: 2
-    m_Value: 23.768713
+    m_Value: 25.474539
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -662,19 +662,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\rebek\Desktop\The Chimera Project
+  m_LastProjectPath: C:\Users\rebek\Desktop\The_Chimera_Project\The Chimera Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e340000
-    m_LastClickedID: 13422
+    m_SelectedIDs: 68340000
+    m_LastClickedID: 13416
     m_ExpandedIDs: 000000006834000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
