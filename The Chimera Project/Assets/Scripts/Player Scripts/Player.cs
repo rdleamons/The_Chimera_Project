@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int currentHealth;
+    public int currentHealth = 100;
     public int maxHealth = 100;
+
+    public Text healthText;
+
+    public GameObject enemy;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -15,7 +20,19 @@ public class Player : MonoBehaviour
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
 
+        SetHealthText();
+
         currentHealth = maxHealth;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(col.gameObject);
+            currentHealth -= 10;
+            SetHealthText();
+        }
     }
 
     private void Update()
@@ -36,8 +53,8 @@ public class Player : MonoBehaviour
         Application.LoadLevel(Application.loadedLevel);
     }
 
-    //public void Damage(int dmg)
-    //{
-        //currentHealth -= dmg;
-    //}
+    void SetHealthText()
+    {
+        healthText.text = "Health: " + currentHealth.ToString();
+    }
 }

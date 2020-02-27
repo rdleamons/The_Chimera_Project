@@ -64,7 +64,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\Player Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SceneChange.cs" />
     <Compile Include="Assets\Scripts\Scratch Scripts\AttackTrigger.cs" />
