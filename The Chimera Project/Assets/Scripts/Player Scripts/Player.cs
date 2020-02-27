@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Enemy"))
         {
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
             currentHealth -= 10;
             SetHealthText();
         }
