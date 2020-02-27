@@ -7,8 +7,9 @@ public class Enemy : MonoBehaviour
 {
     public int currentHealth = 25;
     public int maxHealth = 25;
+    public int enemyAttack;
 
-    public GameObject player;
+    public GameObject playerObj;
     public GameObject enemy;
 
     private Rigidbody2D rb2d;

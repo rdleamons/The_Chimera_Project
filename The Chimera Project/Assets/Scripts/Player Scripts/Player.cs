@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public int attack = 10;
     public int currentHealth = 100;
     public int maxHealth = 100;
 
     public Text healthText;
 
-    public GameObject enemy;
+    public GameObject enemyObj;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -28,9 +29,8 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Enemy"))
-        {
-            //Destroy(col.gameObject);
-            currentHealth -= 10;
+        { 
+            currentHealth -= 5;
             SetHealthText();
         }
     }

@@ -165,7 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec091460e93c9b42abd030f73ad32e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attack: 10
   currentHealth: 100
   maxHealth: 100
   healthText: {fileID: 0}
-  enemy: {fileID: 0}
+  enemyObj: {fileID: 5352416005608143625, guid: fc5a553ceecf43a4ab12ca6e818ce2fc,
+    type: 3}
+  enemy: {fileID: 347263866480875198, guid: fc5a553ceecf43a4ab12ca6e818ce2fc, type: 3}
