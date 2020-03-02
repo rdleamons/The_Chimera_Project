@@ -30,18 +30,33 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Enemy"))
-        { 
-            currentHealth -= 5;
-            SetHealthText();
+        if(col.CompareTag("Enemy"))
+        {
+            enemyNear = true;
+            thisOne = col.gameObject;
         }
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) & enemyNear)
+        {
+            currentHealth -= 5;
+            enemyHealth -= 10;
+            SetHealthText();
+        }
+
+        if(enemyHealth <= 0)
+        {
+            enemyDead = true;
+        }else
+        {
+            enemyDead = false;
+        }
+
+        if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
