@@ -9,8 +9,13 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 25;
     public int enemyAttack;
 
+    public bool playerNear;
+
     public GameObject playerObj;
     public GameObject enemy;
+
+    GameObject thePlayer;
+    public Player player;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -20,33 +25,17 @@ public class Enemy : MonoBehaviour
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
 
-        currentHealth = maxHealth;
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("player"))
-        {
-            currentHealth -= 10;
-        }
-    }
+        thePlayer = GameObject.Find("Player");
+        player = thePlayer.GetComponent<Player>();
+}
 
     private void Update()
     {
-        if (currentHealth > maxHealth)
+        if (player.enemyDead == true)
         {
-            currentHealth = maxHealth;
+            Debug.Log("Enemy is dead.");
+            gameObject.SetActive(false);
         }
-
-        if (currentHealth <= 0)
-        {
-            die();
-        }
-    }
-
-    void die()
-    {
-        Destroy(enemy);
     }
 
 }

@@ -8,10 +8,14 @@ public class Player : MonoBehaviour
     public int attack = 10;
     public int currentHealth = 100;
     public int maxHealth = 100;
+    public int enemyHealth = 25;
+
+    private bool enemyNear;
+    public bool enemyDead;
 
     public Text healthText;
 
-    public GameObject enemyObj;
+    public Enemy enemy;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -26,18 +30,27 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Enemy"))
-        { 
-            currentHealth -= 5;
-            SetHealthText();
-        }
+        enemyNear = true;
     }
 
     private void Update()
     {
-        if(currentHealth > maxHealth)
+        if (Input.GetKeyDown(KeyCode.E) & enemyNear)
+        {
+            currentHealth -= 5;
+            enemyHealth -= 10;
+            SetHealthText();
+        }
+
+        if(enemyHealth <= 0)
+        {
+            enemyDead = true;
+            enemy.gameObject.SetActive(false);
+        }
+
+        if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
