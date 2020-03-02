@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     public Text healthText;
 
-    public Enemy enemy;
+    public GameObject thisOne;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -30,9 +30,15 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    public void OnTriggerEnter2D(Collider2D col)
     {
-        enemyNear = true;
+        if(col.CompareTag("Enemy"))
+        {
+            enemyNear = true;
+            thisOne = col.gameObject;
+
+            enemyDead = false;
+        }
     }
 
     private void Update()
@@ -47,7 +53,6 @@ public class Player : MonoBehaviour
         if(enemyHealth <= 0)
         {
             enemyDead = true;
-            enemy.gameObject.SetActive(false);
         }
 
         if (currentHealth > maxHealth)
