@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4157146892250403345}
   - component: {fileID: 3996474365111329348}
   - component: {fileID: 5478883137276986817}
-  - component: {fileID: 5356554707131948719}
   - component: {fileID: 7019310083384586534}
   - component: {fileID: 4266959170447230889}
+  - component: {fileID: 2433109421494093053}
   m_Layer: 0
   m_Name: Chimera
   m_TagString: player
@@ -123,22 +123,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.25
---- !u!58 &5356554707131948719
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865806528059625796}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.75
 --- !u!114 &7019310083384586534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +152,35 @@ MonoBehaviour:
   attack: 10
   currentHealth: 100
   maxHealth: 100
+  enemyHealth: 25
+  enemyDead: 0
   healthText: {fileID: 0}
-  enemyObj: {fileID: 5352416005608143625, guid: fc5a553ceecf43a4ab12ca6e818ce2fc,
+  enemyObj: {fileID: 2023719909282460189, guid: 2179d1d407a702c4aba2e6796871a8be,
     type: 3}
-  enemy: {fileID: 347263866480875198, guid: fc5a553ceecf43a4ab12ca6e818ce2fc, type: 3}
+  enemy: {fileID: 2023719909282460176, guid: 2179d1d407a702c4aba2e6796871a8be, type: 3}
+--- !u!61 &2433109421494093053
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865806528059625796}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
