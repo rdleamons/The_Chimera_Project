@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int attack = 10;
+    public int attack;
+    public int enemyAttack;
+
     public int currentHealth = 100;
     public int maxHealth = 100;
     public int enemyHealth = 25;
@@ -43,8 +45,14 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) & enemyNear)
         {
-            currentHealth -= 5;
-            enemyHealth -= 10;
+            attack = Random.Range(1, 16);
+            enemyAttack = Random.Range(1, 11);
+
+            if (enemyAttack >= 5)
+            {
+                currentHealth -= enemyAttack;
+            }
+            enemyHealth -= attack;
             SetHealthText();
         }
 
