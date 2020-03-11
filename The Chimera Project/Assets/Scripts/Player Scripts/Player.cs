@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int attack = 10;
+    public int attack;
+    public int enemyAttack;
+
     public int currentHealth = 100;
     public int maxHealth = 100;
     public int enemyHealth = 25;
 
-    private bool enemyNear;
+    public bool enemyNear;
     public bool enemyDead;
 
     public Text healthText;
@@ -39,12 +41,26 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("Enemy"))
+        {
+            enemyNear = false;
+        }
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) & enemyNear)
         {
-            currentHealth -= 5;
-            enemyHealth -= 10;
+            attack = Random.Range(1, 16);
+            enemyAttack = Random.Range(1, 11);
+
+            if (enemyAttack >= 5)
+            {
+                currentHealth -= enemyAttack;
+            }
+            enemyHealth -= attack;
             SetHealthText();
         }
 
