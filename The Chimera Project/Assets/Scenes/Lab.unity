@@ -468,7 +468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.65, y: -7.04, z: -15}
+  m_LocalPosition: {x: -2.65, y: -8.16, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2011,8 +2011,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -15.176454, y: 4.3626337}
-  - {x: 10.286874, y: 4.3595905}
+  - {x: -15.371671, y: 7.2490416}
+  - {x: 10.542935, y: 7.2460117}
 --- !u!1 &1741047008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,7 +2073,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741047008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.65, y: -7.04, z: -15}
+  m_LocalPosition: {x: -2.65, y: -8.16, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 718061011}
@@ -2187,12 +2187,12 @@ PrefabInstance:
     - target: {fileID: 8152071869634193161, guid: 001b062ed81422d429a15399133b5317,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.65
+      value: -2.65
       objectReference: {fileID: 0}
     - target: {fileID: 8152071869634193161, guid: 001b062ed81422d429a15399133b5317,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.04
+      value: -8.16
       objectReference: {fileID: 0}
     - target: {fileID: 8152071869634193161, guid: 001b062ed81422d429a15399133b5317,
         type: 3}
@@ -2363,9 +2363,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 10.664768, y: -6.6890717}
-  - {x: -6.760436, y: -6.6736965}
-  - {x: -6.7700596, y: -1.1746385}
+  - {x: 9.915844, y: -3.7487497}
+  - {x: -6.7295885, y: -3.7359595}
+  - {x: -6.7171125, y: -1.185231}
   - {x: 11.194671, y: -1.1461809}
 --- !u!1 &1944350364
 GameObject:
@@ -2465,8 +2465,8 @@ EdgeCollider2D:
   m_Points:
   - {x: -16.35978, y: -1.2314725}
   - {x: -9.4891405, y: -1.1921194}
-  - {x: -9.490206, y: -6.684312}
-  - {x: -15.962556, y: -6.67344}
+  - {x: -9.496514, y: -3.732385}
+  - {x: -15.39081, y: -3.7017803}
 --- !u!1001 &3496981356362965899
 PrefabInstance:
   m_ObjectHideFlags: 0
