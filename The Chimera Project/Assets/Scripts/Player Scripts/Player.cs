@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public int maxHealth = 100;
     public int enemyHealth = 25;
 
-    private bool enemyNear;
+    public bool enemyNear;
     public bool enemyDead;
 
     public Text healthText;
@@ -38,6 +38,14 @@ public class Player : MonoBehaviour
         {
             enemyNear = true;
             thisOne = col.gameObject;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("Enemy"))
+        {
+            enemyNear = false;
         }
     }
 
