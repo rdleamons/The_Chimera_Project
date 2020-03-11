@@ -13,6 +13,8 @@ public class EnemyMovement : MonoBehaviour
     GameObject thePlayer;
     public Player player;
 
+    GameObject whichEnemy;
+
     Vector2 movement;
 
     private void Start()
@@ -22,6 +24,8 @@ public class EnemyMovement : MonoBehaviour
     }
     private void Update()
     {
+        whichEnemy = player.thisOne;
+
         if(player.enemyDead == false)
         {
             if(wanderTime > 0)
@@ -54,6 +58,5 @@ public class EnemyMovement : MonoBehaviour
     {
         movement.x = Random.Range(-10f, 10f);
         movement.y = Random.Range(-10f, 10f);
-        //transform.eulerAngles = new Vector3(0, Random.Range(0, 360), 0);
     }
 }
