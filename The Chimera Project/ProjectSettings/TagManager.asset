@@ -43,3 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Top Wall
+    uniqueID: 1412326565
+    locked: 0
+  - name: Side Wall
+    uniqueID: 2831620491
+    locked: 0
