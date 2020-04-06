@@ -8,16 +8,16 @@ public class Player : MonoBehaviour
     public int attack;
     public int enemyAttack;
 
-    public int currentHealth = 100;
+    public int currentHealth = 0;
     public int maxHealth = 100;
     public int enemyHealth = 25;
 
     public bool enemyNear;
     public bool enemyDead;
 
-    public Text healthText;
-
     public GameObject thisOne;
+
+    public HealthBar healthBar;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -27,9 +27,8 @@ public class Player : MonoBehaviour
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
 
-        SetHealthText();
-
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void OnTriggerEnter2D(Collider2D col)
@@ -59,9 +58,9 @@ public class Player : MonoBehaviour
             if (enemyAttack >= 5)
             {
                 currentHealth -= enemyAttack;
+                healthBar.SetHealth(currentHealth);
             }
             enemyHealth -= attack;
-            SetHealthText();
         }
 
         if(enemyHealth <= 0)
@@ -88,8 +87,4 @@ public class Player : MonoBehaviour
         Application.LoadLevel(Application.loadedLevel);
     }
 
-    void SetHealthText()
-    {
-        healthText.text = "Health: " + currentHealth.ToString();
-    }
 }
