@@ -22,6 +22,9 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator anim;
 
+    public SpriteRenderer playerRenderer;
+    Color originalColor = Color.white;
+
     private void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
@@ -59,6 +62,8 @@ public class Player : MonoBehaviour
             {
                 currentHealth -= enemyAttack;
                 healthBar.SetHealth(currentHealth);
+
+                StartCoroutine(Flasher(playerRenderer));
             }
             enemyHealth -= attack;
         }
@@ -85,6 +90,13 @@ public class Player : MonoBehaviour
     void die()
     {
         Application.LoadLevel(Application.loadedLevel);
+    }
+
+    IEnumerator Flasher(SpriteRenderer spriteRenderer)
+    {
+        playerRenderer.material.color = Color.red;
+        yield return new WaitForSeconds(.1f);
+        playerRenderer.material.color = originalColor;
     }
 
 }

@@ -355,6 +355,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause
       objectReference: {fileID: 0}
+    - target: {fileID: 1483567170249030902, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483567170249030902, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483567170249030902, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.61960787
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296926649168897231, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 861635a7eb1b2d3428a6458b608d463d,
+        type: 3}
+    - target: {fileID: 2296926649168897231, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296926649168897231, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296926649168897231, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308387011726762449, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308387011726762449, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308387011726762449, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.61960787
+      objectReference: {fileID: 0}
     - target: {fileID: 2625634882085255659, guid: bc4730080903f2647b954bdf02d8c9e1,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -386,6 +437,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3740986678893135116, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3740986678893135116, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 3740986678893135116, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.61960787
       objectReference: {fileID: 0}
     - target: {fileID: 3921657537863064647, guid: bc4730080903f2647b954bdf02d8c9e1,
         type: 3}
