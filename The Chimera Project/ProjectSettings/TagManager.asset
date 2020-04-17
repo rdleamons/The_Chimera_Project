@@ -49,3 +49,6 @@ TagManager:
   - name: Side Wall
     uniqueID: 2831620491
     locked: 0
+  - name: Objects
+    uniqueID: 1346690055
+    locked: 0
