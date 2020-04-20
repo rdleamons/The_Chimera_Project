@@ -41,6 +41,14 @@ public class Player : MonoBehaviour
             enemyNear = true;
             thisOne = col.gameObject;
         }
+
+        if(col.CompareTag("HealthPack"))
+        {
+            currentHealth += 10;
+            healthBar.SetHealth(currentHealth);
+
+            col.gameObject.SetActive(false);
+        }
     }
 
     public void OnTriggerExit2D(Collider2D col)
