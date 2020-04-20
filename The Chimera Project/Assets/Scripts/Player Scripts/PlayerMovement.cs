@@ -4,23 +4,33 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public int stamina = 2;
-    private int maxStamina = 2;
+    public int stamina = 20;
+    private int maxStamina = 20;
 
     public Rigidbody2D rb;
 
+    public StaminaBar staminaBar;
+
     Vector2 movement;
+
+    private void Start()
+    {
+        stamina = maxStamina;
+        staminaBar.SetMaxStamina(maxStamina);
+    }
 
     private void Update()
     {
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) & stamina > 0)
+        staminaBar.SetStamina(stamina);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) & stamina == maxStamina)
         {
             CancelInvoke();
             moveSpeed = 10f;
-            InvokeRepeating("loseStamina", 0, 0.5f);
+            InvokeRepeating("loseStamina", 0, 0.1f);
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift) || stamina == 0)
         {
