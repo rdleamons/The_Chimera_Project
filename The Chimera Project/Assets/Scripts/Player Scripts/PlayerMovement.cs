@@ -4,8 +4,8 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public int stamina = 20;
-    private int maxStamina = 20;
+    public float stamina = 20.0f;
+    private float maxStamina = 20.0f;
 
     public Rigidbody2D rb;
 
@@ -17,6 +17,17 @@ public class PlayerMovement : MonoBehaviour
     {
         stamina = maxStamina;
         staminaBar.SetMaxStamina(maxStamina);
+        rb = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("StaminaPack"))
+        {
+            stamina += 5;
+            col.gameObject.SetActive(false);
+            staminaBar.SetStamina(stamina);
+        }
     }
 
     private void Update()
@@ -57,6 +68,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void gainStamina()
     {
-        stamina++;
+        stamina += 0.5f;
     }
 }
