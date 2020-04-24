@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float originalMoveSpeed = 5f;
     public float stamina = 20.0f;
     private float maxStamina = 20.0f;
 
@@ -40,13 +41,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) & stamina == maxStamina)
         {
             CancelInvoke();
-            moveSpeed = 10f;
+            moveSpeed = moveSpeed * 2;
             InvokeRepeating("loseStamina", 0, 0.1f);
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift) || stamina == 0)
         {
             CancelInvoke();
-            moveSpeed = 5f;
+            moveSpeed = originalMoveSpeed;
             InvokeRepeating("gainStamina", 0, 0.1f);
         }
 
