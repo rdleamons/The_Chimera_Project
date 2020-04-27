@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Scratch Scripts\AttackTrigger.cs" />
     <Compile Include="Assets\Scripts\Scratch Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Scratch Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\StaminaBar.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/rebek/Desktop/The_Chimera_Project/The Chimera Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
