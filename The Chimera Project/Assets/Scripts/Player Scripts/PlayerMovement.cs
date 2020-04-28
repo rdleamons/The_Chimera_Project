@@ -10,11 +10,14 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     public StaminaBar staminaBar;
+    private Animator anim;
 
     Vector2 movement;
 
     private void Start()
     {
+        anim = gameObject.GetComponent<Animator>();
+
         stamina = maxStamina;
         staminaBar.SetMaxStamina(maxStamina);
         rb = gameObject.GetComponent<Rigidbody2D>();

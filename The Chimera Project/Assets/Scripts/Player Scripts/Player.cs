@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) & enemyNear)
+        if ((Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1")) & enemyNear)
         {
             attack = Random.Range(1, 16);
             enemyAttack = Random.Range(1, 11);
