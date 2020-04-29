@@ -12,12 +12,14 @@ public class PlayerMovement : MonoBehaviour
 
     public StaminaBar staminaBar;
     public Animator anim;
+    public SpriteRenderer playerRenderer;
 
     Vector2 movement;
 
     private void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        playerRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         stamina = maxStamina;
         staminaBar.SetMaxStamina(maxStamina);
@@ -40,32 +42,6 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxis("Vertical");
 
         speed = movement.magnitude / Time.deltaTime;
-
-        if(movement.x > 0)
-        {
-            anim.SetBool("xInc", true);
-            anim.SetBool("xDec", false);
-        }
-        else if(movement.x < 0)
-        {
-            anim.SetBool("xDec", true);
-            anim.SetBool("xInc", false);
-        }
-
-        if (movement.y > 0)
-        {
-            anim.SetBool("yInc", true);
-            anim.SetBool("yDec", false);
-        }
-        else if (movement.y < 0)
-        {
-            anim.SetBool("yDec", true);
-            anim.SetBool("yInc", false);
-        }
-
-        anim.SetFloat("x", gameObject.transform.position.x);
-        anim.SetFloat("y", gameObject.transform.position.y);
-        anim.SetFloat("Speed", speed);
 
         staminaBar.SetStamina(stamina);
 
@@ -91,6 +67,45 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+        anim.SetFloat("x", gameObject.transform.position.x);
+        anim.SetFloat("y", gameObject.transform.position.y);
+        anim.SetFloat("Speed", speed);
+
+        if (movement.x > 0)
+        {
+            anim.SetBool("xInc", true);
+            anim.SetBool("xDec", false);
+
+            playerRenderer.flipX = false;
+        }
+        else if (movement.x < 0)
+        {
+            anim.SetBool("xDec", true);
+            anim.SetBool("xInc", false);
+
+            playerRenderer.flipX = true;
+        }
+
+        if (movement.y > 0)
+        {
+            anim.SetBool("yInc", true);
+            anim.SetBool("yDec", false);
+
+        }
+        else if (movement.y < 0)
+        {
+            anim.SetBool("yDec", true);
+            anim.SetBool("yInc", false);
+        }
+
+        if(speed == 0)
+        {
+            anim.SetBool("xDec", false);
+            anim.SetBool("xInc", false);
+            anim.SetBool("yDec", false);
+            anim.SetBool("yInc", false);
+        }
     }
 
     private void loseStamina()
