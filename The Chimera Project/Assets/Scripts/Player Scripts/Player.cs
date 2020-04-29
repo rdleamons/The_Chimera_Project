@@ -14,13 +14,14 @@ public class Player : MonoBehaviour
 
     public bool enemyNear;
     public bool enemyDead;
+    private bool isAttacking = false;
 
     public GameObject thisOne;
 
     public HealthBar healthBar;
 
     private Rigidbody2D rb2d;
-    private Animator anim;
+    public Animator anim;
 
     public SpriteRenderer playerRenderer;
     Color originalColor = Color.white;
@@ -36,13 +37,13 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Enemy"))
+        if (col.CompareTag("Enemy"))
         {
             enemyNear = true;
             thisOne = col.gameObject;
         }
 
-        if(col.CompareTag("HealthPack"))
+        if (col.CompareTag("HealthPack"))
         {
             currentHealth += 10;
             healthBar.SetHealth(currentHealth);
@@ -63,8 +64,10 @@ public class Player : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1")) & enemyNear)
         {
+            isAttacking = true;
             attack = Random.Range(1, 16);
             enemyAttack = Random.Range(1, 11);
+            anim.SetBool("IsAttacking", isAttacking);
 
             if (enemyAttack >= 5)
             {
@@ -76,7 +79,7 @@ public class Player : MonoBehaviour
             enemyHealth -= attack;
         }
 
-        if(enemyHealth <= 0)
+        if (enemyHealth <= 0)
         {
             enemyDead = true;
         }else

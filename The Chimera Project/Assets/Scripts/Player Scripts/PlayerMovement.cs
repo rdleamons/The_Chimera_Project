@@ -6,11 +6,12 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float stamina = 20.0f;
     private float maxStamina = 20.0f;
+    float speed = 0;
 
     public Rigidbody2D rb;
 
     public StaminaBar staminaBar;
-    private Animator anim;
+    public Animator anim;
 
     Vector2 movement;
 
@@ -37,6 +38,34 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
+
+        speed = movement.magnitude / Time.deltaTime;
+
+        if(movement.x > 0)
+        {
+            anim.SetBool("xInc", true);
+            anim.SetBool("xDec", false);
+        }
+        else if(movement.x < 0)
+        {
+            anim.SetBool("xDec", true);
+            anim.SetBool("xInc", false);
+        }
+
+        if (movement.y > 0)
+        {
+            anim.SetBool("yInc", true);
+            anim.SetBool("yDec", false);
+        }
+        else if (movement.y < 0)
+        {
+            anim.SetBool("yDec", true);
+            anim.SetBool("yInc", false);
+        }
+
+        anim.SetFloat("x", gameObject.transform.position.x);
+        anim.SetFloat("y", gameObject.transform.position.y);
+        anim.SetFloat("Speed", speed);
 
         staminaBar.SetStamina(stamina);
 

@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &2052131 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3328082121214090933, guid: 001b062ed81422d429a15399133b5317,
+    type: 3}
+  m_PrefabInstance: {fileID: 1820052830}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &97691591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8339730054130499316, guid: b86ca3f8255ad164d87475441575dc92,
@@ -476,7 +482,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.65, y: -8.16, z: -15}
+  m_LocalPosition: {x: -5, y: -8.16, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2796,7 +2802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741047008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.65, y: -8.16, z: -15}
+  m_LocalPosition: {x: -5, y: -8.16, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 718061011}
@@ -2942,10 +2948,15 @@ PrefabInstance:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 2103826091}
+    - target: {fileID: 7019310083384586534, guid: 001b062ed81422d429a15399133b5317,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 2052131}
     - target: {fileID: 8152071869634193161, guid: 001b062ed81422d429a15399133b5317,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.65
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8152071869634193161, guid: 001b062ed81422d429a15399133b5317,
         type: 3}
