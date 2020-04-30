@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public int currentHealth = 0;
     public int maxHealth = 100;
     public int enemyHealth = 25;
+    public bool isAttacking = false;
 
     public bool enemyNear;
     public bool enemyDead;
@@ -63,9 +64,10 @@ public class Player : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1")) & enemyNear)
         {
+            isAttacking = true;
+            anim.SetBool("IsAttacking", isAttacking);
             attack = Random.Range(1, 16);
             enemyAttack = Random.Range(1, 11);
-            anim.SetBool("IsAttacking", true);
 
             if (enemyAttack >= 5)
             {

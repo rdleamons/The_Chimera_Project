@@ -49,6 +49,7 @@ public class EnemyMovement : MonoBehaviour
         if (player.enemyNear == true)
         {
             moveSpeed = 0;
+            anim.SetFloat("Speed", moveSpeed);
         }
         else
         {
@@ -114,7 +115,5 @@ public class EnemyMovement : MonoBehaviour
     {
         movement.x = Random.Range(-10f, 10f);
         movement.y = Random.Range(-10f, 10f);
-
-        
     }
 }

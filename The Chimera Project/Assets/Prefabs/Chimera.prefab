@@ -125,6 +125,8 @@ MonoBehaviour:
   stamina: 20
   rb: {fileID: 3996474365111329348}
   staminaBar: {fileID: 0}
+  anim: {fileID: 0}
+  playerRenderer: {fileID: 0}
 --- !u!114 &4266959170447230889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,10 +144,12 @@ MonoBehaviour:
   currentHealth: 100
   maxHealth: 100
   enemyHealth: 25
+  isAttacking: 0
   enemyNear: 0
   enemyDead: 0
   thisOne: {fileID: 0}
   healthBar: {fileID: 0}
+  anim: {fileID: 0}
   playerRenderer: {fileID: 0}
 --- !u!58 &5478883137276986817
 CircleCollider2D:
