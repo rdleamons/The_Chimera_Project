@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 25;
 
     public bool playerNear;
+    private bool isAttacking = false;
 
     public GameObject playerObj;
     public GameObject enemy;
