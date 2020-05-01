@@ -121,12 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!95 &2052131 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3328082121214090933, guid: 001b062ed81422d429a15399133b5317,
-    type: 3}
-  m_PrefabInstance: {fileID: 1820052830}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &97691591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8339730054130499316, guid: b86ca3f8255ad164d87475441575dc92,
@@ -458,7 +452,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1269,6 +1263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158881220591663000, guid: bc4730080903f2647b954bdf02d8c9e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4022197892220123194, guid: bc4730080903f2647b954bdf02d8c9e1,
         type: 3}
@@ -2781,7 +2780,7 @@ MonoBehaviour:
   m_Follow: {fileID: 165470356}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -2902,7 +2901,7 @@ PrefabInstance:
         type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 2052131}
+      objectReference: {fileID: 0}
     - target: {fileID: 4311446581247685075, guid: 001b062ed81422d429a15399133b5317,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -2962,12 +2961,17 @@ PrefabInstance:
         type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 2052131}
+      objectReference: {fileID: 0}
     - target: {fileID: 7019310083384586534, guid: 001b062ed81422d429a15399133b5317,
         type: 3}
       propertyPath: playerRenderer
       value: 
       objectReference: {fileID: 1887746177}
+    - target: {fileID: 7019310083384586534, guid: 001b062ed81422d429a15399133b5317,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8152071869634193161, guid: 001b062ed81422d429a15399133b5317,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3683,30 +3687,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4367579517775169980, guid: f286d3376deacb4499447b9a7e34505a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4367579517775169980, guid: f286d3376deacb4499447b9a7e34505a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5922884948548828547, guid: f286d3376deacb4499447b9a7e34505a,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.04629016
+      value: 0.008734092
       objectReference: {fileID: 0}
     - target: {fileID: 5922884948548828547, guid: f286d3376deacb4499447b9a7e34505a,
         type: 3}
       propertyPath: m_Size.x
-      value: 3.49157
+      value: 0.9971534
       objectReference: {fileID: 0}
     - target: {fileID: 5922884948548828547, guid: f286d3376deacb4499447b9a7e34505a,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.4167304
+      value: 0.1187551
       objectReference: {fileID: 0}
     - target: {fileID: 5922884948548828547, guid: f286d3376deacb4499447b9a7e34505a,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.0834608
+      value: 0.47256362
       objectReference: {fileID: 0}
     - target: {fileID: 7455777296737128852, guid: f286d3376deacb4499447b9a7e34505a,
         type: 3}
       propertyPath: newLevel
-      value: Level3
+      value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 7764692621080753867, guid: f286d3376deacb4499447b9a7e34505a,
         type: 3}

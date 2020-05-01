@@ -3,7 +3,8 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 7f;
+    public float ogSpeed;
     public float stamina = 20.0f;
     private float maxStamina = 20.0f;
     float speed = 0;
@@ -24,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
         stamina = maxStamina;
         staminaBar.SetMaxStamina(maxStamina);
         rb = gameObject.GetComponent<Rigidbody2D>();
+
+        ogSpeed = moveSpeed;
     }
 
     public void OnTriggerEnter2D(Collider2D col)
@@ -97,14 +100,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) & stamina == maxStamina)
         {
             CancelInvoke();
-            moveSpeed *= 2;
+            moveSpeed = moveSpeed * 2;
             InvokeRepeating("loseStamina", 0, 0.1f);
             anim.speed = 2;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift) || stamina == 0)
         {
             CancelInvoke();
-            moveSpeed /= 2;
+            moveSpeed = ogSpeed;
             InvokeRepeating("gainStamina", 0, 0.1f);
             anim.speed = 1;
         }

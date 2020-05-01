@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
 
         if (col.CompareTag("HealthPack"))
         {
-            currentHealth += 10;
+            currentHealth += 15;
             healthBar.SetHealth(currentHealth);
 
             col.gameObject.SetActive(false);
