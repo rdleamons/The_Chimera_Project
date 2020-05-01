@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4266959170447230889}
   - component: {fileID: 5478883137276986817}
   - component: {fileID: 5294544019834151590}
-  - component: {fileID: 3328082121214090933}
   m_Layer: 0
   m_Name: Chimera
   m_TagString: player
@@ -122,11 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  stamina: 20
   rb: {fileID: 3996474365111329348}
-  staminaBar: {fileID: 0}
-  anim: {fileID: 0}
-  playerRenderer: {fileID: 0}
 --- !u!114 &4266959170447230889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,13 +139,10 @@ MonoBehaviour:
   currentHealth: 100
   maxHealth: 100
   enemyHealth: 25
-  isAttacking: 0
   enemyNear: 0
   enemyDead: 0
+  healthText: {fileID: 0}
   thisOne: {fileID: 0}
-  healthBar: {fileID: 0}
-  anim: {fileID: 0}
-  playerRenderer: {fileID: 0}
 --- !u!58 &5478883137276986817
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -183,22 +175,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.16, y: 6.23}
   m_Direction: 0
---- !u!95 &3328082121214090933
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865806528059625796}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: de1a1eacd16aaa54b91e2262c3bef7f2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

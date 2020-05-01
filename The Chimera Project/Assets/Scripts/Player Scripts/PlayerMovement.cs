@@ -97,14 +97,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) & stamina == maxStamina)
         {
             CancelInvoke();
-            moveSpeed = 10f;
+            moveSpeed *= 2;
             InvokeRepeating("loseStamina", 0, 0.1f);
             anim.speed = 2;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift) || stamina == 0)
         {
             CancelInvoke();
-            moveSpeed = 5f;
+            moveSpeed /= 2;
             InvokeRepeating("gainStamina", 0, 0.1f);
             anim.speed = 1;
         }

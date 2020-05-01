@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!61 &799819152
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082527877210880022}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.043279603, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.5, y: 5.5}
+    newSize: {x: 5.5, y: 5.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.56607604, y: 5.5}
+  m_EdgeRadius: 0
+--- !u!1001 &7177089791373359639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9186363788581175809, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_Name
+      value: SideWall Prefab (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -36.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20.914246
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186363788581175811, guid: 7e0ce6716f93e874abeb38c4089f2870,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7e0ce6716f93e874abeb38c4089f2870, type: 3}
+--- !u!1 &2082527877210880022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9186363788581175809, guid: 7e0ce6716f93e874abeb38c4089f2870,
+    type: 3}
+  m_PrefabInstance: {fileID: 7177089791373359639}
+  m_PrefabAsset: {fileID: 0}
