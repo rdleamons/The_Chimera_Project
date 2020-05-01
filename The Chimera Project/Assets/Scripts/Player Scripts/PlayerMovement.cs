@@ -82,12 +82,14 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("yInc", false);
         }
 
-        if (speed == 0)
+        if (speed == 0 || (movement.x == 0 & movement.y == 0))
         {
             anim.SetBool("xDec", false);
             anim.SetBool("xInc", false);
             anim.SetBool("yDec", false);
             anim.SetBool("yInc", false);
+
+            anim.SetFloat("Speed", speed);
         }
 
         staminaBar.SetStamina(stamina);
@@ -97,12 +99,14 @@ public class PlayerMovement : MonoBehaviour
             CancelInvoke();
             moveSpeed = 10f;
             InvokeRepeating("loseStamina", 0, 0.1f);
+            anim.speed = 2;
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift) || stamina == 0)
         {
             CancelInvoke();
             moveSpeed = 5f;
             InvokeRepeating("gainStamina", 0, 0.1f);
+            anim.speed = 1;
         }
 
         if (stamina >= maxStamina)

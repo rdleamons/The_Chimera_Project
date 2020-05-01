@@ -64,8 +64,10 @@ public class Player : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1")) & enemyNear)
         {
+
             isAttacking = true;
             anim.SetBool("IsAttacking", isAttacking);
+
             attack = Random.Range(1, 16);
             enemyAttack = Random.Range(1, 11);
 
@@ -79,10 +81,29 @@ public class Player : MonoBehaviour
             enemyHealth -= attack;
         }
 
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1"))
+        {
+            isAttacking = true;
+            anim.SetBool("IsAttacking", isAttacking);
+        }
+
+        if (Input.GetKeyUp(KeyCode.E) || Input.GetButtonUp("Fire1"))
+        {
+            isAttacking = false;
+            anim.SetBool("IsAttacking", isAttacking);
+        }
+
+        if ((Input.GetKeyUp(KeyCode.E) || Input.GetButtonUp("Fire1")) & enemyNear)
+        {
+            isAttacking = false;
+            anim.SetBool("IsAttacking", isAttacking);
+        }
+
         if (enemyHealth <= 0)
         {
             enemyDead = true;
-            anim.SetBool("IsAttacking", false);
+            isAttacking = false;
+            anim.SetBool("IsAttacking", isAttacking);
         }
         else
         {
