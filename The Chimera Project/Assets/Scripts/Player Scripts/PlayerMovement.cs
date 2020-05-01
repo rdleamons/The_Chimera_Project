@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
 
         ogSpeed = moveSpeed;
+        speed = 0;
     }
 
     public void OnTriggerEnter2D(Collider2D col)
@@ -43,10 +44,6 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
-
-        speed = movement.magnitude / Time.deltaTime;
-
-        anim.SetFloat("Speed", speed);
 
         if (movement.x > 0)
         {
@@ -92,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("yDec", false);
             anim.SetBool("yInc", false);
 
-            anim.SetFloat("Speed", speed);
+            anim.SetFloat("Speed", 0);
         }
 
         staminaBar.SetStamina(stamina);
@@ -116,6 +113,9 @@ public class PlayerMovement : MonoBehaviour
         {
             stamina = maxStamina;
         }
+
+        speed = movement.magnitude / Time.deltaTime;
+        anim.SetFloat("Speed", speed);
     }
 
     private void FixedUpdate()

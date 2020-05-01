@@ -910,7 +910,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Move: WASD
 
-    Attack: E'
+    Attack: E/Left Click'
 --- !u!222 &1435068644
 CanvasRenderer:
   m_ObjectHideFlags: 0

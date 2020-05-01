@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4266959170447230889}
   - component: {fileID: 5478883137276986817}
   - component: {fileID: 5294544019834151590}
-  - component: {fileID: -3384949403381064075}
+  - component: {fileID: 3679106884055523426}
   m_Layer: 0
   m_Name: Chimera
   m_TagString: player
@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  ogSpeed: 0
   stamina: 20
   rb: {fileID: 3996474365111329348}
   staminaBar: {fileID: 0}
@@ -183,7 +184,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.16, y: 6.23}
   m_Direction: 0
---- !u!95 &-3384949403381064075
+--- !u!95 &3679106884055523426
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
