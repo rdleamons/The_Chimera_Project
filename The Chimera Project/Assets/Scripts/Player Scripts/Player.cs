@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
 
     void die()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        Application.LoadLevel("Death Screen");
     }
 
     IEnumerator Flasher(SpriteRenderer spriteRenderer)
