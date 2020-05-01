@@ -298,8 +298,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -45.7}
-  m_SizeDelta: {x: 338.2, y: 57.3}
+  m_AnchoredPosition: {x: -219.75003, y: -18.000275}
+  m_SizeDelta: {x: 199, y: 57.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &504188793
 MonoBehaviour:
@@ -375,11 +375,11 @@ RectTransform:
   m_Children:
   - {fileID: 113678284}
   m_Father: {fileID: 1668049831}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -125.4}
+  m_AnchoredPosition: {x: 0, y: -161.55}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &898107266
@@ -507,8 +507,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 12}
-  m_SizeDelta: {x: 500, y: 297.1}
+  m_AnchoredPosition: {x: 120.649956, y: -6}
+  m_SizeDelta: {x: 414.3, y: 297.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1293186552
 MonoBehaviour:
@@ -535,7 +535,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -549,14 +549,20 @@ MonoBehaviour:
 
 
 
-
     Andrew Yandell
-
 
 
 
     Rebekah
     Leamons
+
+
+
+    Patrick De Arteaga
+
+    (https://patrickdearteaga.com/arcade-music/)
+
+
 
 '
 --- !u!222 &1293186553
@@ -601,8 +607,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 138.7}
-  m_SizeDelta: {x: 161.98, y: 55.1}
+  m_AnchoredPosition: {x: -181.45004, y: 114.999985}
+  m_SizeDelta: {x: 122.4, y: 55.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522372681
 MonoBehaviour:
@@ -957,8 +963,9 @@ RectTransform:
   - {fileID: 1522372680}
   - {fileID: 1293186551}
   - {fileID: 504188792}
-  - {fileID: 898107265}
   - {fileID: 1792623952}
+  - {fileID: 1935501478}
+  - {fileID: 898107265}
   m_Father: {fileID: 1612052941}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1033,13 +1040,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1668049831}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 38}
-  m_SizeDelta: {x: 161.98, y: 55.1}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -185.95004, y: 60}
+  m_SizeDelta: {x: 131.4, y: 55.1}
+  m_Pivot: {x: 0.5, y: 0.7344752}
 --- !u!114 &1792623953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1079,4 +1086,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792623951}
+  m_CullTransparentMesh: 0
+--- !u!1 &1935501477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1935501478}
+  - component: {fileID: 1935501480}
+  - component: {fileID: 1935501479}
+  m_Layer: 5
+  m_Name: Text (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1935501478
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935501477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1668049831}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -166, y: -39}
+  m_SizeDelta: {x: 91.5, y: 57.3}
+  m_Pivot: {x: 0.50000024, y: 0.883303}
+--- !u!114 &1935501479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935501477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.09411766, g: 0.09411766, b: 0.09411766, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: a9c2f76e4688f71498b050f688bd904b, type: 3}
+    m_FontSize: 26
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Music:'
+--- !u!222 &1935501480
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935501477}
   m_CullTransparentMesh: 0
